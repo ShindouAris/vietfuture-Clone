@@ -60,9 +60,49 @@ const navItems: NavItem[] = [
   { label: 'LIÊN HỆ', href: '/lien-he' },
 ];
 
+interface MobileNavItemProps {
+  item: NavItem;
+}
+
+function MobileNavItem({ item }: MobileNavItemProps) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <div className="flex items-center justify-between">
+        <a href={item.href} className="block py-2 font-medium text-sm hover:text-[#0979a8]">
+          {item.label}
+        </a>
+        {item.children && (
+          <button
+            className="px-2 py-1 text-xs text-gray-500"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle submenu"
+          >
+            {open ? '▲' : '▼'}
+          </button>
+        )}
+      </div>
+      {item.children && open && (
+        <div className="pl-4 space-y-1 border-l border-gray-200 ml-2">
+          {item.children.map((child, i) => (
+            <a
+              key={i}
+              href={child.href}
+              className="block py-1 text-sm text-gray-600 hover:text-[#0979a8]"
+              target={child.href.startsWith('http') ? '_blank' : undefined}
+              rel={child.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              {child.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -73,36 +113,36 @@ export default function Header() {
               <img
                 src="https://vietfuture.world/wp-content/uploads/2025/10/Logo-viet-future-2026_300.png"
                 alt="VietFuture"
-                className="h-[60px] w-auto"
+                className="h-[55px] w-auto"
               />
             </a>
           </div>
 
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl px-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            ☰
+            {mobileMenuOpen ? '✕' : '☰'}
           </button>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(index)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
+              <div key={index} className="relative group">
                 <a
                   href={item.href}
-                  className="font-medium text-sm hover:text-[#0979a8] transition-colors"
+                  className="flex items-center gap-1 px-3 py-2 font-medium text-sm text-gray-800 hover:text-[#0979a8] transition-colors whitespace-nowrap"
                 >
                   {item.label}
-                  {item.children && <span className="ml-1 text-xs">▼</span>}
+                  {item.children && <span className="text-[10px] opacity-60">▼</span>}
                 </a>
-                {item.children && activeDropdown === index && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50">
+
+                {item.children && (
+                  <div className="absolute top-full left-0 w-56 bg-white rounded-lg shadow-xl py-2 z-50
+                    opacity-0 invisible translate-y-2
+                    group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                    transition-all duration-200 ease-out
+                    before:content-[''] before:absolute before:bottom-full before:left-0 before:w-full before:h-3">
                     {item.children.map((child, childIndex) => (
                       <a
                         key={childIndex}
@@ -118,39 +158,23 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <a href="https://vietfuture.world/en/homepage_en/" className="flex items-center">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="English" width="16" height="11" />
+
+            <a href="https://vietfuture.world/en/homepage_en/" className="px-2 flex items-center">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII="
+                alt="English"
+                width="20"
+                height="14"
+              />
             </a>
           </nav>
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-2">
+          <div className="md:hidden py-4 border-t border-gray-100">
+            <nav className="flex flex-col space-y-1">
               {navItems.map((item, index) => (
-                <div key={index}>
-                  <a
-                    href={item.href}
-                    className="block py-2 font-medium text-sm hover:text-[#0979a8]"
-                  >
-                    {item.label}
-                  </a>
-                  {item.children && (
-                    <div className="pl-4 space-y-1">
-                      {item.children.map((child, childIndex) => (
-                        <a
-                          key={childIndex}
-                          href={child.href}
-                          className="block py-1 text-sm text-gray-600 hover:text-[#0979a8]"
-                          target={child.href.startsWith('http') ? '_blank' : undefined}
-                          rel={child.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        >
-                          {child.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <MobileNavItem key={index} item={item} />
               ))}
             </nav>
           </div>
