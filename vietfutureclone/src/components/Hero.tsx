@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative h-162.5 w-full overflow-hidden">
+    <section className="relative md:h-125 md:w-full lg:h-162.5 w-170 h-70">
       <img
         src="/images/2026/01/bannertv.jpg"
         alt="VietFuture Banner"
@@ -14,7 +14,7 @@ export default function Hero() {
               href="https://vietfuture.vinasa.org.vn/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-linear-to-r from-[#0057B7] to-[#66B2FF] text-white font-bold text-lg px-8 py-4 rounded-xl hover:shadow-xl transition-all transform hover:scale-105"
+              className="inline-block bg-linear-to-r from-[#0057B7] to-[#66B2FF] text-white font-bold text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-xl hover:shadow-xl transition-all transform hover:scale-105"
             >
               ĐĂNG KÝ THAM GIA
             </a>
