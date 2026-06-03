@@ -1,4 +1,4 @@
-import Countdown from './Countdown';
+import Countdown from '../components/Home/Countdown';
 
 export default function MainContent() {
   return (

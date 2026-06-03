@@ -1,7 +1,7 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import MainContent from './components/MainContent'
-import Footer from './components/Footer'
+import Header from './components/Home/Header'
+import Hero from './components/Home/Hero'
+import MainContent from './pages/MainContent'
+import Footer from './components/Home/Footer'
 
 function App() {
   return (
