@@ -71,7 +71,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <a href="/">
               <img
-                src="/images/Logo-viet-future-2026_300.png"
+                src="https://vietfuture.world/wp-content/uploads/2025/10/Logo-viet-future-2026_300.png"
                 alt="VietFuture"
                 className="h-[60px] w-auto"
               />

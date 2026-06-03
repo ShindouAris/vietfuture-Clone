@@ -72,10 +72,10 @@ export default function Footer() {
             </ul>
             <div className="flex gap-2 mt-4">
               <a href="https://zalo.me/1135993391995696702" target="_blank" rel="noopener noreferrer">
-                <img src="/images/2025/11/zalo-icon-300x300-1.png" alt="Zalo" className="w-10 h-10" />
+                <img src="/images/2025/11/zalo-icon-300x300-1.png" alt="Zalo" className="w-10 h-10 rounded" />
               </a>
               <a href="https://www.facebook.com/vinasavn" target="_blank" rel="noopener noreferrer">
-                <img src="/images/2025/11/2023_Facebook_icon-300x300-1.png" alt="Facebook" className="w-10 h-10" />
+                <img src="/images/2025/11/2023_Facebook_icon-300x300-1.png" alt="Facebook" className="w-10 h-10 rounded" />
               </a>
             </div>
           </div>

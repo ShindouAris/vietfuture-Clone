@@ -3,7 +3,7 @@ import Countdown from './Countdown';
 export default function MainContent() {
   return (
     <main className="py-8">
-      <div className="container mx-auto max-w-[1220px] px-4">
+      <div className="container mx-auto max-w-305 px-4">
         <div className="text-center mb-8">
           <a
             href="/danh-sach-giai-thuong-vietfuture-2025"
@@ -32,7 +32,7 @@ export default function MainContent() {
 
           <div className="text-center mb-8">
             <img
-              src="/images/2025/11/Tai-sao-nen-tham-gia-copy.jpg"
+              src="/images/2025/11/Tai-sao-nen-tham-gia-copy-1024x577.jpg"
               alt="Tại sao nên tham gia"
               className="w-full max-w-4xl mx-auto rounded-lg"
             />
@@ -49,7 +49,7 @@ export default function MainContent() {
 
           <div className="text-center mb-8">
             <img
-              src="/images/2025/11/Lic-trinh-trien-khai1.jpg"
+              src="/images/2025/11/Lic-trinh-trien-khai1-1536x850.jpg"
               alt="Lịch trình triển khai"
               className="w-full max-w-4xl mx-auto rounded-lg"
             />
@@ -65,7 +65,7 @@ export default function MainContent() {
 
           <div className="text-center mb-8">
             <img
-              src="/images/2025/11/CTTT-1.png"
+              src="/images/2025/11/CTTT-1-1024x573.png"
               alt="Cơ cấu giải thưởng 1"
               className="w-full max-w-3xl mx-auto"
             />
@@ -73,7 +73,7 @@ export default function MainContent() {
 
           <div className="text-center mb-8">
             <img
-              src="/images/2025/11/CTTT-21.png"
+              src="/images/2025/11/CTTT-21-1024x445.png"
               alt="Cơ cấu giải thưởng 2"
               className="w-full max-w-3xl mx-auto"
             />
@@ -81,7 +81,7 @@ export default function MainContent() {
 
           <div className="text-center mb-8">
             <img
-              src="/images/2025/11/CTTT-31.png"
+              src="/images/2025/11/CTTT-31-1024x471.png"
               alt="Cơ cấu giải thưởng 3"
               className="w-full max-w-3xl mx-auto"
             />
@@ -104,17 +104,17 @@ export default function MainContent() {
 
           <div className="space-y-6 mb-8">
             <img
-              src="/images/2025/11/Vong-thuyet-trinh-toan-quoc-copy.jpg"
+              src="/images/2025/11/Vong-thuyet-trinh-toan-quoc-copy-1536x940.jpg"
               alt="Vòng thuyết trình toàn quốc"
               className="w-full rounded-lg"
             />
             <img
-              src="/images/2025/11/Le-trao-copy.jpg"
+              src="/images/2025/11/Le-trao-copy-1536x900.jpg"
               alt="Lễ trao giải"
               className="w-full rounded-lg"
             />
             <img
-              src="/images/2026/01/Hoat-dong-noi-bat-copy111.jpg"
+              src="/images/2026/01/Hoat-dong-noi-bat-copy111-1536x1058.jpg"
               alt="Hoạt động nổi bật"
               className="w-full rounded-lg"
             />
