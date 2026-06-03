@@ -34,7 +34,7 @@ export default function Countdown() {
     <div className="flex justify-center gap-4 my-8">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="flex flex-col items-center">
-          <div className="bg-[#fc5d18] text-white text-3xl md:text-5xl font-bold px-6 py-4 rounded-lg min-w-[80px] text-center">
+          <div className="bg-[#fc5d18] text-white text-3xl md:text-5xl font-bold px-6 py-4 rounded-lg min-w-20 text-center">
             {value.toString().padStart(2, '0')}
           </div>
           <span className="text-sm mt-2 uppercase text-gray-600">{unit}</span>

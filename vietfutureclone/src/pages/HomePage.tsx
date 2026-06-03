@@ -1,6 +1,6 @@
 import Countdown from '../components/Home/Countdown';
 
-export default function MainContent() {
+export default function HomePage() {
   return (
     <main className="py-8">
       <div className="container mx-auto max-w-305 px-4">

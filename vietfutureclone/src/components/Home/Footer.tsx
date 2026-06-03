@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-[#023e72] text-white">
-      <div className="container mx-auto max-w-[1220px] px-4 py-12">
+      <div className="container mx-auto max-w-305 px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h2 className="text-lg font-bold mb-4">Về chúng tôi</h2>
@@ -83,7 +83,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-black/20 py-4">
-        <div className="container mx-auto max-w-[1220px] px-4 text-center text-sm">
+        <div className="container mx-auto max-w-305 px-4 text-center text-sm">
           © Copyright VIETFUTURE | All Right Reserved. VINASA
         </div>
       </div>

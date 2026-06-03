@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface NavItem {
   label: string;
@@ -69,9 +70,15 @@ function MobileNavItem({ item }: MobileNavItemProps) {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <a href={item.href} className="block py-2 font-medium text-sm hover:text-[#0979a8]">
-          {item.label}
-        </a>
+        {item.href.startsWith('http') ? (
+          <a href={item.href} className="block py-2 font-medium text-sm hover:text-[#0979a8]" target="_blank" rel="noopener noreferrer">
+            {item.label}
+          </a>
+        ) : (
+          <Link to={item.href} className="block py-2 font-medium text-sm hover:text-[#0979a8]">
+            {item.label}
+          </Link>
+        )}
         {item.children && (
           <button
             className="px-2 py-1 text-xs text-gray-500"
@@ -85,15 +92,25 @@ function MobileNavItem({ item }: MobileNavItemProps) {
       {item.children && open && (
         <div className="pl-4 space-y-1 border-l border-gray-200 ml-2">
           {item.children.map((child, i) => (
-            <a
-              key={i}
-              href={child.href}
-              className="block py-1 text-sm text-gray-600 hover:text-[#0979a8]"
-              target={child.href.startsWith('http') ? '_blank' : undefined}
-              rel={child.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-            >
-              {child.label}
-            </a>
+            child.href.startsWith('http') ? (
+              <a
+                key={i}
+                href={child.href}
+                className="block py-1 text-sm text-gray-600 hover:text-[#0979a8]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {child.label}
+              </a>
+            ) : (
+              <Link
+                key={i}
+                to={child.href}
+                className="block py-1 text-sm text-gray-600 hover:text-[#0979a8]"
+              >
+                {child.label}
+              </Link>
+            )
           ))}
         </div>
       )}
@@ -106,16 +123,16 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto max-w-[1220px] px-4">
-        <div className="flex h-[73px] items-center justify-between">
-          <div className="flex-shrink-0">
-            <a href="/">
+      <div className="container mx-auto max-w-305 px-4">
+        <div className="flex h-18.25 items-center justify-between">
+          <div className="shrink-0">
+            <Link to="/">
               <img
                 src="https://vietfuture.world/wp-content/uploads/2025/10/Logo-viet-future-2026_300.png"
                 alt="VietFuture"
-                className="h-[55px] w-auto"
+                className="h-13.75 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           <button
@@ -129,13 +146,25 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item, index) => (
               <div key={index} className="relative group">
-                <a
-                  href={item.href}
-                  className="flex items-center gap-1 px-3 py-2 font-medium text-sm text-gray-800 hover:text-[#0979a8] transition-colors whitespace-nowrap"
-                >
-                  {item.label}
-                  {item.children && <span className="text-[10px] opacity-60">▼</span>}
-                </a>
+                {item.href.startsWith('http') ? (
+                  <a
+                    href={item.href}
+                    className="flex items-center gap-1 px-3 py-2 font-medium text-sm text-gray-800 hover:text-[#0979a8] transition-colors whitespace-nowrap"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.label}
+                    {item.children && <span className="text-[10px] opacity-60">▼</span>}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="flex items-center gap-1 px-3 py-2 font-medium text-sm text-gray-800 hover:text-[#0979a8] transition-colors whitespace-nowrap"
+                  >
+                    {item.label}
+                    {item.children && <span className="text-[10px] opacity-60">▼</span>}
+                  </Link>
+                )}
 
                 {item.children && (
                   <div className="absolute top-full left-0 w-56 bg-white rounded-lg shadow-xl py-2 z-50
@@ -144,15 +173,25 @@ export default function Header() {
                     transition-all duration-200 ease-out
                     before:content-[''] before:absolute before:bottom-full before:left-0 before:w-full before:h-3">
                     {item.children.map((child, childIndex) => (
-                      <a
-                        key={childIndex}
-                        href={child.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0979a8] transition-colors"
-                        target={child.href.startsWith('http') ? '_blank' : undefined}
-                        rel={child.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      >
-                        {child.label}
-                      </a>
+                      child.href.startsWith('http') ? (
+                        <a
+                          key={childIndex}
+                          href={child.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0979a8] transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {child.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={childIndex}
+                          to={child.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0979a8] transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 )}
