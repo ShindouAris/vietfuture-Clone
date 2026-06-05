@@ -1,6 +1,50 @@
 export default function QuyenLoiPage() {
   return (
     <main className="py-8 bg-[#f8fbff]">
+      <div id="page-header-1089917729" className="page-header-wrapper">
+        <div className="page-title dark simple-title">
+          <div className="page-title-bg">
+            <div
+              className="title-bg fill bg-fill parallax-active"
+              data-parallax-container=".page-title"
+              data-parallax-background=""
+              data-parallax="-"
+            />
+            <div className="title-overlay fill" />
+          </div>
+
+          <div className="page-title-inner container align-center text-center flex-row-col medium-flex-wrap">
+            <div className="title-wrapper uppercase is-larger flex-col">
+              <h1 className="entry-title mb-0">Quyền lợi</h1>
+            </div>
+            <div className="title-content flex-col">
+              <div className="title-breadcrumbs pb-half pt-half" />
+            </div>
+          </div>
+
+          <style>{`
+            #page-header-1089917729 .page-title-inner {
+              min-height: 300px;
+            }
+            #page-header-1089917729 .title-bg {
+              background-image: url(https://vietfuture.world/wp-content/uploads/2025/11/nen-future-copy1.jpg);
+              background: linear-gradient(
+                120deg,
+                #3D3B8E 0%,
+                #2356C8 15%,
+                #5BD0EA 30%,
+                #E8EEF5 45%,
+                #F9D44A 55%,
+                #F4873A 68%,
+                #E84830 80%,
+                #D03252 92%,
+                #3D3B8E 100%
+              );
+            }
+          `}</style>
+        </div>
+      </div>
+
       <div className="container mx-auto max-w-305 px-4">
         <div className="rounded-[32px] bg-white/80 border border-[#d9e9ff] p-6 shadow-sm text-left mb-8">
           <div className="col-inner">
