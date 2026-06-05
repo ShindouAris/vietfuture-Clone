@@ -11,6 +11,8 @@
 - **Location**: `vietfutureclone/src/pages`
 - All page-level components must be placed in this directory
 - Each page component represents a distinct route in the application
+- **Subpages**: If a page has subpages, create a subfolder within `pages` to group them together (e.g., `pages/dashboard/`)
+- **Category Pages**: If a page belongs to a specific category, create a subfolder for that category (e.g., `pages/products/`)
 
 ### Assets
 - **Location**: `vietfutureclone/public`
@@ -27,5 +29,6 @@
 
 1. Create component → Place in `vietfutureclone/src/components`
 2. Create page → Place in `vietfutureclone/src/pages`
+2.1 if the page is a subpage, a in-category pages, create a subfolder in `pages` and place the page there
 3. Add route → Update `vietfutureclone/src/routes.tsx`
 4. Add assets → Place in `vietfutureclone/public`
