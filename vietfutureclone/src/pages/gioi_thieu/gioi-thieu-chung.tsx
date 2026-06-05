@@ -1,7 +1,7 @@
 export default function GioiThieuChung() {
   return (
     <main>
-      <section className="relative min-h-[200px] md:min-h-[300px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-50 md:min-h-75 flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -9,7 +9,6 @@ export default function GioiThieuChung() {
             backgroundPosition: '51% 0%',
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-white text-2xl md:text-4xl font-bold">
             GIỚI THIỆU CHUNG
@@ -17,9 +16,9 @@ export default function GioiThieuChung() {
         </div>
       </section>
 
-      <div className="h-[30px]" />
+      <div className="h-7.5" />
 
-      <div className="container mx-auto max-w-[1220px] px-4 pb-12">
+      <div className="container mx-auto max-w-305 px-4 pb-12">
         <div className="text-justify space-y-4">
           <p>
             <b>Giải thưởng Sáng tạo tương lai – VietFuture Awards</b>

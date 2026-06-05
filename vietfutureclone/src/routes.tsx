@@ -1,6 +1,9 @@
 import { type ReactElement } from 'react';
 import HomePage from './pages/HomePage';
 import GioiThieuChung from './pages/gioi_thieu/gioi-thieu-chung';
+import LinhVucDuThi from './pages/gioi_thieu/linh-vuc-du-thi';
+import LichTrinhTrienKhai from './pages/gioi_thieu/lich-trinh-trien-khai';
+import TieuChiDanhGia from './pages/gioi_thieu/tieu-chi-danh-gia';
 
 interface RouteConfig {
   path: string;
@@ -11,9 +14,9 @@ export const routes: RouteConfig[] = [
   { path: '/', element: <HomePage /> },
   // Trang giới thiệu
   { path: '/gioi-thieu-chung', element: <GioiThieuChung /> },
-  { path: '/linh-vuc-du-thi', element: <HomePage /> },
-  { path: '/tieu-chi-danh-gia', element: <HomePage /> },
-  { path: '/lich-trinh-trien-khai', element: <HomePage /> },
+  { path: '/linh-vuc-du-thi', element: <LinhVucDuThi /> },
+  { path: '/tieu-chi-danh-gia', element: <TieuChiDanhGia /> },
+  { path: '/lich-trinh-trien-khai', element: <LichTrinhTrienKhai /> },
   // Trang hội đồng
   { path: '/gioi-thieu-hoi-dong', element: <HomePage /> },
   { path: '/giam-khao', element: <HomePage /> },
