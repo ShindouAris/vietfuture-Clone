@@ -1,26 +1,20 @@
-export default function Hero() {
+﻿export default function Hero() {
   return (
-    <section className="relative md:h-125 md:w-full lg:h-162.5 w-170 h-70">
-      <img
-        src="/images/2026/01/bannertv.jpg"
-        alt="VietFuture Banner"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      
-      <div className="container mx-auto max-w-305 px-4 h-full relative z-10">
-        <div className="flex items-center h-full">
-          <div className="w-full md:w-1/3 ml-0 md:ml-30 md:mt-55">
-            <a
-              href="https://vietfuture.vinasa.org.vn/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-linear-to-r from-[#0057B7] to-[#66B2FF] text-white font-bold text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-xl hover:shadow-xl transition-all transform hover:scale-105"
-            >
-              ĐĂNG KÝ THAM GIA
-            </a>
-          </div>
-        </div>
+    <section className="relative w-full">
+      <div className="height-fix is-invisible">
+        <img
+          decoding="async"
+          width="1600"
+          height="650"
+          src="https://vietfuture.world/wp-content/uploads/2026/01/bannertv.jpg"
+          className="attachment-original size-original"
+          alt=""
+          srcSet="https://vietfuture.world/wp-content/uploads/2026/01/bannertv.jpg 1600w, https://vietfuture.world/wp-content/uploads/2026/01/bannertv-300x122.jpg 300w, https://vietfuture.world/wp-content/uploads/2026/01/bannertv-1024x416.jpg 1024w, https://vietfuture.world/wp-content/uploads/2026/01/bannertv-768x312.jpg 768w, https://vietfuture.world/wp-content/uploads/2026/01/bannertv-1536x624.jpg 1536w"
+          sizes="(max-width: 1600px) 100vw, 1600px"
+        />
       </div>
+
     </section>
   );
 }
+

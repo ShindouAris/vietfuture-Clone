@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 
 export default function Countdown() {
   const targetDate = new Date('2026-10-08T18:00:00').getTime();
@@ -43,3 +43,4 @@ export default function Countdown() {
     </div>
   );
 }
+

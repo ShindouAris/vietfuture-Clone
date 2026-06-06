@@ -1,4 +1,4 @@
-export default function Footer() {
+﻿export default function Footer() {
   return (
     <footer className="bg-[#023e72] text-white">
       <div className="container mx-auto max-w-305 px-4 py-12">
@@ -6,7 +6,7 @@ export default function Footer() {
           <div>
             <h2 className="text-lg font-bold mb-4">Về chúng tôi</h2>
             <p className="text-sm opacity-90">
-              Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam (VINASA) là một tổ chức phi chính phủ, hoạt động phi lợi nhuận, đại diện cho ngành phần mềm và dịch vụ CNTT Việt Nam mục đích thúc đẩy sự phát triển của các doanh nghiệp và ngành CNTT Việt Nam. VINASA được thành lập ngày 27/04/2002.
+              Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam (VINASA) là một tổ chức phi chính phủ, hoạt động phi lợi nhuận, đại diện cho ngành phần mềm và dịch vụ CNTT Việt Nam với mục đích thúc đẩy sự phát triển của các doanh nghiệp và ngành CNTT Việt Nam. VINASA được thành lập ngày 27/04/2002.
             </p>
           </div>
 
@@ -90,3 +90,4 @@ export default function Footer() {
     </footer>
   );
 }
+
