@@ -1,4 +1,4 @@
-import { type ReactElement } from 'react';
+﻿import { type ReactElement } from 'react';
 import HomePage from './pages/HomePage';
 import GioiThieuChung from './pages/gioi_thieu/gioi-thieu-chung';
 import LinhVucDuThi from './pages/gioi_thieu/linh-vuc-du-thi';
@@ -36,3 +36,4 @@ export const routes: RouteConfig[] = [
   { path: '/faqs', element: <HomePage /> },
   { path: '/lien-he', element: <HomePage /> },
 ];
+

@@ -1,4 +1,4 @@
-export default function Hero() {
+﻿export default function Hero() {
   return (
     <section className="relative w-full">
       <div className="height-fix is-invisible">
@@ -17,3 +17,4 @@ export default function Hero() {
     </section>
   );
 }
+
