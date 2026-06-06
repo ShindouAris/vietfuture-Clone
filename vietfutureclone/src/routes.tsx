@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react';
 import HomePage from './pages/HomePage';
-import PressReleasePage from './pages/PressReleasePage';
-import NewsPage from './pages/NewsPage';
+import PressReleasePage from "./pages/Pages/media/PressReleasePage";
+import NewsPage from "./pages/Pages/media/NewsPage";
 
 interface RouteConfig {
   path: string;

@@ -1,6 +1,6 @@
-import MediaPageBanner from '../components/Media/MediaPageBanner';
-import NewsCarousel from '../components/Media/NewsCarousel';
-import { newsArticles } from '../data/newsArticles';
+import MediaPageBanner from '../../../components/Media/MediaPageBanner';
+import NewsCarousel from '../../../components/Media/NewsCarousel';
+import { newsArticles } from '../../../data/newsArticles';
 
 export default function NewsPage() {
   return (

@@ -1,5 +1,5 @@
-import MediaPageBanner from '../components/Media/MediaPageBanner';
-import PressReleaseContent, { PRESS_HEADER_IMAGE } from '../components/Media/PressReleaseContent';
+import MediaPageBanner from '../../../components/Media/MediaPageBanner';
+import PressReleaseContent, { PRESS_HEADER_IMAGE } from '../../../components/Media/PressReleaseContent';
 
 export default function PressReleasePage() {
   return (
