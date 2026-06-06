@@ -1,15 +1,17 @@
 export default function GioiThieuChung() {
   return (
     <main>
-      <section className="relative min-h-50 md:min-h-75 flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://vietfuture.world/wp-content/uploads/2025/11/nen-future-copy1.jpg')",
-            backgroundPosition: '51% 0%',
-          }}
+      <section className="relative overflow-hidden">
+        <img
+          fetchpriority="high"
+          decoding="async"
+          width="1600"
+          height="650"
+          src="https://vietfuture.world/wp-content/uploads/2026/01/bannertv.jpg"
+          className="w-full"
+          alt=""
         />
-        <div className="relative z-10 text-center px-4">
+        <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-2xl md:text-4xl font-bold">
             GIỚI THIỆU CHUNG
           </h1>

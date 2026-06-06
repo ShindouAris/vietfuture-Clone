@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+﻿import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Home/Header';
 import Hero from './components/Home/Hero';
 import Footer from './components/Home/Footer';
@@ -9,7 +9,7 @@ function App() {
   const showHero = pathname === '/';
 
   return (
-    <div className="font-[Montserrat,sans-serif] text-[#140000]">
+    <div className="font-sans text-[#140000]">
       <Header />
       {showHero && <Hero />}
       <Routes>
@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+
