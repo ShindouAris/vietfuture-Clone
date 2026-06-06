@@ -5,13 +5,13 @@ import Footer from './components/Home/Footer';
 import { routes } from './routes';
 
 function App() {
-  const location = useLocation();
-  const isHome = location.pathname === '/';
+  const { pathname } = useLocation();
+  const showHero = pathname === '/';
 
   return (
     <div className="font-sans text-[#140000]">
       <Header />
-      {isHome && <Hero />}
+      {showHero && <Hero />}
       <Routes>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />

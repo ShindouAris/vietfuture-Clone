@@ -25,3 +25,11 @@ body {
   }
 }
 
+/* Thông cáo báo chí — link ẩn kiểu trang gốc (chỉ in đậm, không gạch chân) */
+.press-release a {
+  color: inherit;
+  text-decoration: none;
+}
+.press-release a:hover {
+  color: #0979a8;
+}

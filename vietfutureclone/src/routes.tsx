@@ -1,5 +1,7 @@
 ﻿import { type ReactElement } from 'react';
 import HomePage from './pages/HomePage';
+import PressReleasePage from "./pages/Pages/media/PressReleasePage";
+import NewsPage from "./pages/Pages/media/NewsPage";
 import GioiThieuChung from './pages/gioi_thieu/gioi-thieu-chung';
 import LinhVucDuThi from './pages/gioi_thieu/linh-vuc-du-thi';
 import LichTrinhTrienKhai from './pages/gioi_thieu/lich-trinh-trien-khai';
@@ -31,8 +33,9 @@ export const routes: RouteConfig[] = [
   { path: '/quyen-loi', element: <QuyenLoiPage /> },
   { path: '/quy-trinh-dang-ky', element: <QuyTrinhDangKyPage /> },
   // Trang truyền thông
-  { path: '/thong-cao-bao-chi', element: <HomePage /> },
-  { path: '/bao-chi-dua-tin', element: <HomePage /> },
+  { path: '/thong-cao-bao-chi', element: <PressReleasePage /> },
+  { path: '/bao-chi-dua-tin', element: <NewsPage /> },
+  // [Optional] Trang liên hệ
   { path: '/faqs', element: <HomePage /> },
   { path: '/lien-he', element: <HomePage /> },
 ];
