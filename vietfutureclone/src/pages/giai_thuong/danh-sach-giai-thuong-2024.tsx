@@ -1,5 +1,5 @@
 import DanhSachGiaiThuongPage from './DanhSachGiaiThuongPage';
-import { prizes2024 } from './data/prizes2024';
+import { prizes2024 } from '../../data/prizes2024';
 
 const columns = [
   { key: 'stt', label: 'STT', nowrap: true },
