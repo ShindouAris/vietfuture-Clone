@@ -3,7 +3,7 @@ export default function GioiThieuChung() {
     <main>
       <section className="relative overflow-hidden">
         <img
-          fetchpriority="high"
+          fetchPriority="high"
           decoding="async"
           width="1600"
           height="650"

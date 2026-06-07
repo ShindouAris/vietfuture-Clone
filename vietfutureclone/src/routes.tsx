@@ -8,6 +8,9 @@ import LichTrinhTrienKhai from './pages/gioi_thieu/lich-trinh-trien-khai';
 import TieuChiDanhGia from './pages/gioi_thieu/tieu-chi-danh-gia';
 import QuyenLoiPage from './pages/tham_gia/QuyenLoiPage';
 import QuyTrinhDangKyPage from './pages/tham_gia/QuyTrinhDangKyPage';
+import DanhSachGiaiThuong2025 from './pages/giai_thuong/danh-sach-giai-thuong-2025';
+import DanhSachGiaiThuong2024 from './pages/giai_thuong/danh-sach-giai-thuong-2024';
+import DanhSachGiaiThuong2023 from './pages/giai_thuong/danh-sach-giai-thuong-2023';
 
 interface RouteConfig {
   path: string;
@@ -26,9 +29,9 @@ export const routes: RouteConfig[] = [
   { path: '/giam-khao', element: <HomePage /> },
   { path: '/mentor', element: <HomePage /> },
   // Trang giải thưởng
-  { path: '/danh-sach-giai-thuong-vietfuture-2025', element: <HomePage /> },
-  { path: '/danh-sach-giai-thuong-vietfuture-2024', element: <HomePage /> },
-  { path: '/danh-sach-giai-thuong-vietfuture-2023', element: <HomePage /> },
+  { path: '/danh-sach-giai-thuong-vietfuture-2025', element: <DanhSachGiaiThuong2025 /> },
+  { path: '/danh-sach-giai-thuong-vietfuture-2024', element: <DanhSachGiaiThuong2024 /> },
+  { path: '/danh-sach-giai-thuong-vietfuture-2023', element: <DanhSachGiaiThuong2023 /> },
   // Trang tham gia
   { path: '/quyen-loi', element: <QuyenLoiPage /> },
   { path: '/quy-trinh-dang-ky', element: <QuyTrinhDangKyPage /> },
