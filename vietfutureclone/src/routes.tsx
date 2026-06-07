@@ -12,9 +12,8 @@ import DanhSachGiaiThuong2025 from './pages/giai_thuong/danh-sach-giai-thuong-20
 import DanhSachGiaiThuong2024 from './pages/giai_thuong/danh-sach-giai-thuong-2024';
 import DanhSachGiaiThuong2023 from './pages/giai_thuong/danh-sach-giai-thuong-2023';
 import GioiThieuHoiDong from './pages/hoi_dong/GioiThieuHoiDong';
-import HoiDongGiamKhao2025 from './pages/hoi_dong/HoiDongGiamKhao2025';
-import HoiDongGiamKhao2026 from './pages/hoi_dong/HoiDongGiamKhao2026';
 import DanhSachMentor from './pages/hoi_dong/DanhSachMentor';
+import HoiDongGiamKhao2025 from './pages/hoi_dong/HoiDongGiamKhao2025';
 
 interface RouteConfig {
   path: string;
@@ -30,9 +29,8 @@ export const routes: RouteConfig[] = [
   { path: '/lich-trinh-trien-khai', element: <LichTrinhTrienKhai /> },
   // Trang hội đồng
   { path: '/gioi-thieu-hoi-dong', element: <GioiThieuHoiDong /> },
-  { path: '/hoi-dong-giam-khao-2025', element: <HoiDongGiamKhao2025 /> },
-  { path: '/hoi-dong-giam-khao-2026', element: <HoiDongGiamKhao2026 /> },
-  { path: '/danh-sach-mentor', element: <DanhSachMentor /> },
+  { path: '/giam-khao', element: <HoiDongGiamKhao2025 /> },
+  { path: '/mentor', element: <DanhSachMentor /> },
   // Trang giải thưởng
   { path: '/danh-sach-giai-thuong-vietfuture-2025', element: <DanhSachGiaiThuong2025 /> },
   { path: '/danh-sach-giai-thuong-vietfuture-2024', element: <DanhSachGiaiThuong2024 /> },
